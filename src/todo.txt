@@ -1,7 +1,0 @@
-[x] assign some kind of points system
-[x] print a league table in order of "points"
-[x] a header to show what each column of the table is
-[x] fix the bug
-[x] enhance player rating to take age into account
-- throw a bit of uncertainty into playMatch
-[x] home advantage

@@ -1,10 +1,12 @@
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Random;
 
 public class League {
 
     private List<Team> teams;           // creating a list of teams
+
 
     public League(List<Team> teams) {
         this.teams = teams;
@@ -21,8 +23,11 @@ public class League {
     }
 
     private void playMatch(Team team, Team otherTeam){
-        int teamPerformance = (int) (1.1 * team.teamRating);
-        int otherTeamPerformance = otherTeam.teamRating;
+        Random r = new Random();
+        float rand1 = r.nextFloat();
+        float rand2 = r.nextFloat();
+        double teamPerformance = rand1 * 1.1 * team.teamRating;
+        double otherTeamPerformance = rand2 * otherTeam.teamRating;
         if (teamPerformance > otherTeamPerformance){
             team.wins++;
             otherTeam.losses++;
