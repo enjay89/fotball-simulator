@@ -40,12 +40,14 @@ public class League {
         }
     }
 
-    public void showResults(){
+    public String showResults(){
         Collections.sort(teams);
-        System.out.println("\t\tWins\tDraws\t\tLosses\t\tPoints");
+        StringBuilder builder = new StringBuilder();
+        builder.append("\t\tWins\tDraws\t\tLosses\t\tPoints");
         for (Team team : teams){
-            System.out.println(team);
+            builder.append("\n" + team.toString());
         }
+        return builder.toString();
     }
 
 

@@ -42,6 +42,6 @@ public class Main {
 
         League league = new League(teams);
         league.play();
-        league.showResults();
+        System.out.println(league.showResults());
     }
 }
